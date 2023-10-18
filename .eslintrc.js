@@ -8,18 +8,14 @@ module.exports = {
     node: true,
     browser: true,
   },
-  extends: [
-    'eslint:recommended',
-    // 'plugin:vue/recommended',
-    'plugin:vue/vue3-recommended',
-  ],
+  extends: ['eslint:recommended', 'plugin:vue/vue3-recommended'],
   rules: {
     /* eslint:recommended */
-    // semi: ['error', 'always'],
     indent: ['error', 2],
     'comma-spacing': ['error', {before: false, after: true}],
+    'no-unused-vars': 'warn',
 
-    //...
+    'vue/singleline-html-element-content-newline': 'off',
 
     /* plugin:vue/vue3-essential */
     'vue/html-closing-bracket-newline': [
@@ -41,10 +37,10 @@ module.exports = {
       },
     ],
     'vue/max-attributes-per-line': [
-      'error',
+      'warn',
       {
         singleline: {
-          max: 2,
+          max: 5,
         },
         multiline: {
           max: 2,
